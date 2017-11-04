@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/leaderbourds"
+    tools:context="com.shadowsych.greenview.LeaderboardActivity"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:width="125dp" />
+
+    <TextView
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Logout"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/nameTxT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/logOut"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/pointsTxT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTxT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Score"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/lead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/score2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lead2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lead1"
+        android:layout_alignStart="@+id/lead1"
+        android:layout_centerVertical="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lead3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lead2"
+        android:layout_alignRight="@+id/lead2"
+        android:layout_below="@+id/lead2"
+        android:layout_marginTop="42dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lead4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lead3"
+        android:layout_alignRight="@+id/lead3"
+        android:layout_below="@+id/lead3"
+        android:layout_marginTop="47dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lead5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lead4"
+        android:layout_alignStart="@+id/lead4"
+        android:layout_below="@+id/lead4"
+        android:layout_marginTop="43dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pointsTxT"
+        android:layout_alignStart="@+id/pointsTxT"
+        android:layout_alignTop="@+id/lead1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/score1"
+        android:layout_alignStart="@+id/score1"
+        android:layout_alignTop="@+id/lead2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/score2"
+        android:layout_alignRight="@+id/score2"
+        android:layout_alignTop="@+id/lead3"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/score3"
+        android:layout_alignStart="@+id/score3"
+        android:layout_alignTop="@+id/lead4"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lead5"
+        android:layout_alignBottom="@+id/lead5"
+        android:layout_alignLeft="@+id/score4"
+        android:layout_alignStart="@+id/score4"
+        android:text="TextView" />
+
+</RelativeLayout>
+
