@@ -3,7 +3,7 @@
 - Rohith Rajashekarbabu (PHP & MySQL Server-side Developer)
 - Michael Kasman (Team Coordinator)
 - Mostafa Amir (Graphics Designer)
-- Hrishikesh Rajashekarbabu (Android Studios Designer)
+- Hrishikesh Rajashekarbabu (Android Studio Designer)
 
 # Purpose
 GreenView is a mobile application which allows users to scan objects and determine their recyclability.
