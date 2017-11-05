@@ -1,7 +1,9 @@
 package com.shadowsych.greenview;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -29,12 +31,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         //hides the system bars and makes the layout on full screen mode
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-        //initialize the control systems
+        //initialize the control systems and give permisssion for tbe file builder
         callbackManager = CallbackManager.Factory.create();
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
 
         if(Profile.getCurrentProfile() != null && AccessToken.getCurrentAccessToken() != null){
             userId = AccessToken.getCurrentAccessToken().getUserId();
