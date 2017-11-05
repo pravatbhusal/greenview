@@ -33,7 +33,7 @@ public class LeaderboardActivity extends Activity {
         String userId = MainActivity.userId;
         String personName = MainActivity.personName;
         PHPConnection phpConn = new PHPConnection();
-        final ClarifaiClient client = new ClarifaiBuilder("ae322ffb0b2e4cbba7ecc7d19d123871").buildSync();
+        final ClarifaiClient client = new ClarifaiBuilder("API_KEY_HERE").buildSync();
         final int REQUEST_CODE = 1;
 
         @Override
