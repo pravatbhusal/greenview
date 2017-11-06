@@ -27,6 +27,7 @@ GreenView is a mobile app which will allow users to take pictures of any items a
 4. Set-up the Facebook API (Documentation Here: https://developers.facebook.com/docs/)
 5. Set-up the Clairfai API (Documentation Here: https://clarifai.com/developer/guide/)
 6. Inside the LeaderboardActivity.java file, change the API_KEY_HERE to your Clairfai API Key
+7. Inside the values/string.xml, change the FACEBOOK_API_HERE to your Facebook API Key
 7. Finished!
 
 # Database Configuration
