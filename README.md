@@ -1,5 +1,8 @@
 <img src="https://raw.githubusercontent.com/Shadowsych/greenview/master/app/src/main/res/mipmap/ic_launcher_round.png" width="100" height="100" />
 
+### Google Play Store: https://play.google.com/store/apps/details?id=com.shadowsych.greenview  
+### DevPost: https://devpost.com/software/greenview-ut2ryo
+
 # Developers
 - Pravat Bhusal (Java Client-side Developer)
 - Rohith Rajashekarbabu (PHP & MySQL Server-side Developer)
