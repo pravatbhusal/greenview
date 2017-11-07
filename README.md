@@ -37,3 +37,15 @@ GreenView is a mobile app which will allow users to take pictures of any items a
 1. Inside the main/php folder, export the database.sql file into your MySQL database 
 2. Inside the main/php folder, open the dbconnection.php file and configure the variables to your database credentials
 3. Finished!
+
+# Generating Facebook Release KeyHash
+1. Open the application in the Google Play Developer account  
+2. Click "Release Management" then click "App signing"  
+3. Copy and paste the SHA-1 certificate fingerprint (for example: 3B:DA:A0:5B:4F:35:71:02:4E:27:22:B9:AC:B2:77:2F:9D:A9:9B:D9)  
+4. Now create a bytearray for the certificate and then convert it into base64 in the onCreate() function in the MainActivity.java  
+`byte[] sha1 = {
+    0x3B, (byte)0xDA, (byte)0xA0, 0x5B, 0x4F, 0x35, 0x71, 0x02, 0x4E, 0x27, 0x22, (byte)0xB9, (byte)0xAc, (byte)0xB2, 0x77, 0x2F, (byte)0x9D, (byte)0xA9, (byte)0x9B, (byte)0xD9
+};`  
+`Log.e("keyhash", Base64.encodeToString(sha1, Base64.NO_WRAP));`
+5. Copy the keyhash from the LogCat and then go to developers.facebook.com/app then go to "Settings" then paste your keyhash  
+6. Finished!
