@@ -32,8 +32,8 @@ import clarifai2.dto.prediction.Concept;
 public class LeaderboardActivity extends Activity {
         String userId = MainActivity.userId;
         String personName = MainActivity.personName;
-        final String recycableItems = "aluminium, bottle, plastic, tin, can, water, cardboard, envelope, paper, magazine, mail,"
-                + " newspaper, book, flyer, folder, drink, jug";
+        final String[] recycableItems = {"aluminium", "bottle", "plastic", "tin", "can", "water", "cardboard",
+                "envelope", "paper", "magazine", "mail", "newspaper", "book", "flyer", "folder", "drink", "jug"};
         String results = "not recyclable";
         PHPConnection phpConn = new PHPConnection();
         final ClarifaiClient client = new ClarifaiBuilder("API_KEY_HERE").buildSync();
@@ -208,8 +208,14 @@ public class LeaderboardActivity extends Activity {
                         //check if a value in the sendVariables variable is recycable
                         for (Object key : sendVariables.keySet()) {
                             String item = (String) sendVariables.get(key);
-                            if(recycableItems.contains(item)) {
-                                results = item;
+                            for(int j = 0; j < recycableItems.length; j ++) {
+                                if(recycableItems[j].equalsIgnoreCase(item)) {
+                                    results = item;
+                                    break; //break the for loop inside
+                                }
+                            }
+                            //if the value of results was edited, then break the for loop
+                            if(!results.contains("not recyclable")) {
                                 break;
                             }
                         }
