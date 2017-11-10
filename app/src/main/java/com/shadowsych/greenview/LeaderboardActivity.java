@@ -32,6 +32,9 @@ import clarifai2.dto.prediction.Concept;
 public class LeaderboardActivity extends Activity {
         String userId = MainActivity.userId;
         String personName = MainActivity.personName;
+        final String recycableItems = "aluminium, bottle, plastic, tin, can, water, cardboard, envelope, paper, magazine, mail,"
+                + " newspaper, book, flyer, folder, drink, jug";
+        String results = "not recyclable";
         PHPConnection phpConn = new PHPConnection();
         final ClarifaiClient client = new ClarifaiBuilder("API_KEY_HERE").buildSync();
         final int REQUEST_CODE = 1;
@@ -202,15 +205,24 @@ public class LeaderboardActivity extends Activity {
                             tempDataResults = tempDataResults.replaceFirst("name=", "");
                             tempDataResults = tempDataResults.replaceFirst(", createdAt", "");
                         }
-                        String results = phpConn.HTTPRequest("https://greenview2017.000webhostapp.com/compare_items.php","POST", sendVariables);
+                        //check if a value in the sendVariables variable is recycable
+                        for (Object key : sendVariables.keySet()) {
+                            String item = (String) sendVariables.get(key);
+                            if(recycableItems.contains(item)) {
+                                results = item;
+                                break;
+                            }
+                        }
                         runOnUiThread(new Runnable() {
                             public void run() {
                                 if(!results.contains("not recyclable")) {
                                     //show popup that the item is recycable and give the person 5 points
                                     Toast.makeText(LeaderboardActivity.this, "It's recyclable! +5 points for your " + results + "!", Toast.LENGTH_LONG).show();
+                                    results = "not recyclable"; //reset results string
                                     addPoints();
                                 } else {
                                     Toast.makeText(LeaderboardActivity.this, "It's NOT recyclable!", Toast.LENGTH_LONG).show();
+                                    results = "not recyclable"; //reset results string
                                 }
                             }
                         });

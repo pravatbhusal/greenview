@@ -7,8 +7,8 @@ android {
         applicationId "com.shadowsych.greenview"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {
             enabled true
@@ -39,6 +39,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile files('libs/jphp.jar')
-    compile 'com.clarifai.clarifai-api2:core:[2.3.0]'
+    compile 'com.clarifai.clarifai-api2:core:2.3.0'
     testCompile 'junit:junit:4.12'
 }
