@@ -3,6 +3,11 @@ include("dbconnection.php");
 
 $userID = $_POST['userID'];
 
+//make sure the userID is not empty
+if(empty($userID)) {
+	exit;
+}
+
 $query = "SELECT * FROM users WHERE userID='$userID'";
 $select_user = mysqli_query($link, $query);    
 
