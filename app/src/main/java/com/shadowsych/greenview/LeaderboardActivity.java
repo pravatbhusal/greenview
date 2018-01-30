@@ -252,9 +252,9 @@ public class LeaderboardActivity extends Activity {
 
         @Override
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            //check if the request being made is for the camera
             try {
                 super.onActivityResult(requestCode, resultCode, data);
+                //check if the specific request being made is for the camera
                 if (requestCode == REQUEST_CODE  && resultCode  == RESULT_OK) {
                     String imageFile = "sdcard/greenview/cam_image.jpg";
                     analyzeImage(imageFile);
